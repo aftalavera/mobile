@@ -1,0 +1,1 @@
+<?phpclass Precintos extends CI_model{	public function __construct()	{		parent::__construct();		$this->load->database();	}		public function get_name($precinto)	{		$query = $this->db->query('			SELECT name FROM precinto where precintoid=?',$precinto);		return $query->row()->name;	}		}
